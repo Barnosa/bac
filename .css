@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #be0505, #1b1b1b);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "profile profile profile"
+        ". balance ."
+        "deposit history pix";
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: start;
+    justify-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+
+.user-profile {
+    width: 150px; /* Aumentei o tamanho do contêiner */
+    height: 150px; /* Aumentei o tamanho do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 100%; /* Ajusta a imagem para ocupar todo o contêiner */
+    height: 100%; /* Ajusta a imagem para ocupar todo o contêiner */
+    object-fit: cover; /* Mantém a proporção e corta a imagem para caber no contêiner */
+    border: 2px solid #fff;
+}
+
+
+.balance {
+    grid-area: balance;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+    margin-top: -30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.balance h2 {
+    margin-bottom: 10px;
+}
+
+.balance input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.action {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.deposit {
+    grid-area: deposit;
+    background-color: #c5340f;
+    color: white;
+}
+
+.history {
+    grid-area: history;
+    border: 1px solid #ccc;
+}
+
+.pix {
+    grid-area: pix;
+    background-color: #202020;
+    color: white;
+}
+
+.action h3 {
+    margin-bottom: 20px;
+}
+
+.action input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.action button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deposit button, .pix button {
+    background-color: #000000;
+}
+
+.deposit button:hover, .pix button:hover {
+    background-color: #dddddd;
+}
+
+.history-content {
+    height: 120px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "profile"
+            "balance"
+            "deposit"
+            "history"
+            "pix";
+        justify-items: center;
+    }
+    
+    .user-profile, .balance, .action {
+        width: 100%;
+    }
+}

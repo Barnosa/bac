@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Banco</title>
+    <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <div class="container">
+        <!-- Perfil do usuário -->
+        <div class="user-profile">
+            <img src="419257808_1481815409418972_2588691203094605724_n.png" alt="Foto do Usuário">
+        </div>
+
+        <!-- Seção de saldo -->
+        <div class="balance">
+            <h2>Dinheiro na Conta</h2>
+            <input type="text" readonly id="saldoUsuario" value="R$ 0,00">
+        </div>
+
+        <!-- Seção de depósito -->
+        <div class="action deposit">
+            <h3>Depositar</h3>
+            <input type="text" id="depositAmount" placeholder="Valor">
+            <button id="depositButton">Depositar</button>
+        </div>
+
+        <!-- Seção de histórico de transações -->
+        <div class="action history">
+            <h3>Histórico de Transações</h3>
+            <div class="history-content" id="transactionList"></div>
+        </div>
+
+        <!-- Seção de transferência PIX -->
+        <div class="action pix">
+            <h3>Pix</h3>
+            <input type="text" id="pixKey" placeholder="Chave Pix">
+            <input type="text" id="pixAmount" placeholder="Valor">
+            <button id="pixButton">Transferir</button>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
